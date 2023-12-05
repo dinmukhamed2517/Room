@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="#1C1B1B"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Weekly Groceries"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/itemsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="58dp"
+            android:text="Example text for this text view"
+            android:textColor="#777676"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/progressLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+        <RelativeLayout
+            android:id="@+id/progressLayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/duplicateImageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circular_shape"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="---"
+                android:textColor="#A0A0A0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/duplicateImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_copy"
+            app:layout_constraintBottom_toTopOf="@id/duplicateTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/duplicateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duplicate"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toTopOf="@id/hideImageView"
+            app:layout_constraintEnd_toEndOf="@+id/duplicateImageView"
+            app:layout_constraintStart_toStartOf="@+id/duplicateImageView"
+            app:layout_constraintTop_toBottomOf="@+id/duplicateImageView" />
+
+        <ImageView
+            android:id="@+id/hideImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_eyeoff"
+            app:layout_constraintBottom_toTopOf="@id/hideTextView"
+            app:layout_constraintEnd_toEndOf="@+id/duplicateTextView"
+            app:layout_constraintStart_toStartOf="@+id/duplicateTextView"
+            app:layout_constraintTop_toBottomOf="@id/duplicateTextView" />
+
+        <TextView
+            android:id="@+id/hideTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hide"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/hideImageView"
+            app:layout_constraintStart_toStartOf="@+id/hideImageView"
+            app:layout_constraintTop_toBottomOf="@+id/hideImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

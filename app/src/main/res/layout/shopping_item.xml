@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/item_rounded_corners"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_chain" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_notebook" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingHorizontal="8dp"
+        android:text="Bread"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/itemCheckbox"
+        android:layout_width="28dp"
+        android:layout_height="28dp" />
+</LinearLayout>
