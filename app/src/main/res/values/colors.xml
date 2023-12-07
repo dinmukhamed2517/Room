@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main_bg">#f8f8f8</color>
+    <color name="main_green">#4CAF50</color>
+    <color name="grey">#2C2C2E</color>
+    <color name="red">#FF2424</color>
+    <color name="light_grey">#808080</color>
+    <color name="card_view_1">#b3a0ff</color>
+    <color name="cardview_color">#93EEFA</color>
+    <color name="card_view_2">#FFC107</color>
+    <color name="card_view_3">#a0c6ff</color>
+    <color name="chip_color1">#C1B3FB</color>
+    <color name="chip_color2">#FFD75F</color>
+    <color name="chip_color3">#C2D8FB</color>
+    <color name="main_color">#f55649</color>
+    <color name="text_color">#1C1C1E</color>
+    <color name="default_color">#FFFFFFFF</color>
+    <color name="royal_blue">#4169e1</color>
 </resources>

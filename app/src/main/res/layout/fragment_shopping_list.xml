@@ -90,11 +90,19 @@
             android:id="@+id/addItemButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:layout_gravity="center"
             android:backgroundTint="#265751"
             android:text="+ Add Item"
             android:textColor="@color/white"
             android:textSize="14sp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/order_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order products"
+            android:layout_gravity="center"
+            android:backgroundTint="#265751"
+            />
     </LinearLayout>
 
 

@@ -3,6 +3,7 @@ package kz.just_code.roomproject.presentation
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -11,11 +12,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.airbnb.lottie.LottieAnimationView
 import dagger.hilt.android.AndroidEntryPoint
 import kz.just_code.roomproject.data.local.entity.ShoppingItemEntity
 import kz.just_code.roomproject.R
@@ -57,6 +61,9 @@ class ShoppingListFragment : Fragment() {
         binding.addItemButton.setOnClickListener {
             showAddItemDialog()
         }
+        binding.orderBtn.setOnClickListener {
+            showCustomDialog("Success", "You orders will be delivered soon")
+        }
     }
 
     private fun updateAddItemButtonGravity(items: List<ShoppingItemEntity>) {
@@ -78,6 +85,25 @@ class ShoppingListFragment : Fragment() {
         } else {
             binding.emptyImageView.visibility = View.GONE
             binding.emptyTextView.visibility = View.GONE
+        }
+    }
+    protected fun showCustomDialog(title: String, content: String) {
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.custom_success_dialog)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        val animationView: LottieAnimationView = dialog.findViewById(R.id.animation)
+        val titleTextView: TextView = dialog.findViewById(R.id.title)
+        val contentTextView: TextView = dialog.findViewById(R.id.content)
+
+        animationView.playAnimation()
+        titleTextView.text = title
+        contentTextView.text = content
+        dialog.show()
+        val button: Button = dialog.findViewById(R.id.ok_btn)
+        button.setOnClickListener {
+            dialog.dismiss()
         }
     }
 
